@@ -1,0 +1,21 @@
+{
+  "name": "cli-weather",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/joelvitorniino/cli-weather.git",
+  "author": "joelvitorniino <joelprofessor13@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node src/app"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/yargs": "^17.0.13",
+    "pkg": "^5.8.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "yargs": "^17.6.2"
+  }
+}
