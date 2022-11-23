@@ -5,8 +5,16 @@
   "repository": "https://github.com/joelvitorniino/cli-weather.git",
   "author": "joelvitorniino <joelprofessor13@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "cli-weather": "./dist/cli.js"
+  },
   "scripts": {
-    "dev": "ts-node src/app"
+    "dev": "ts-node src/app",
+    "build": "tsc --build",
+    "package": "pkg . --targets node16-x64 --output cli-weather"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",

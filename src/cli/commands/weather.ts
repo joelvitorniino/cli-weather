@@ -36,11 +36,9 @@ export const builder: CommandBuilder<Options, Options> = (yargs) => {
 export const handler = async (argv: Arguments<Options>): Promise<void> => {
     const { name, city} = argv;
     
-    if(city) {
-        const { data } = await axios.get<IWttr>(`https://wttr.in/${name}?format=j1&lang=pt`);
+    const { data } = await axios.get<IWttr>(`https://wttr.in/${name}?format=j1&lang=pt`);
 
-        process.stdout.write(`Temperatura: ${data.current_condition[0].temp_C}\n\nSensação Térmica: ${data.current_condition[0].FeelsLikeC}`);
-    };
+    process.stdout.write(`Temperatura: ${data.current_condition[0].temp_C}\nSensação Térmica: ${data.current_condition[0].FeelsLikeC}`);
   
     process.exit(0);
   };
